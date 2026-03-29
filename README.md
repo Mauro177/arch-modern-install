@@ -1,4 +1,9 @@
-# Guide d’installation d’Arch Linux
+# Guide d’installation d’Arch Linux moderne et sécurisé
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux-blue?logo=arch-linux)](https://archlinux.org/)
+[![Last Commit](https://img.shields.io/github/last-commit/Mauro177/arch-modern-install)](https://github.com/Mauro177/arch-modern-install/commits/main)
+[![Issues](https://img.shields.io/github/issues/Mauro177/arch-modern-install)](https://github.com/Mauro177/arch-modern-install/issues)
 
 Installation complète d’Arch Linux incluant le chiffrement LUKS2 avec déverrouillage automatique via TPM 2.0, une image noyau unifiée (UKI), Secure Boot, le système de fichiers Btrfs, ainsi qu’un environnement de bureau KDE Plasma ou GNOME.
 
