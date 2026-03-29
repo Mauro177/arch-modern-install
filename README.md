@@ -5,7 +5,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/Mauro177/arch-modern-install)](https://github.com/Mauro177/arch-modern-install/commits/main)
 [![Issues](https://img.shields.io/github/issues/Mauro177/arch-modern-install)](https://github.com/Mauro177/arch-modern-install/issues)
 
-Installation complète d’Arch Linux incluant le chiffrement LUKS2 avec déverrouillage automatique via TPM 2.0, une image noyau unifiée (UKI), Secure Boot, le système de fichiers Btrfs, ainsi qu’un environnement de bureau KDE Plasma ou GNOME.
+Installation complète d’Arch Linux incluant le chiffrement LUKS2 avec déverrouillage automatique via TPM 2.0, Unified kernel image (UKI), Secure Boot, le système de fichiers Btrfs, ainsi qu’un environnement de bureau KDE Plasma ou GNOME.
 
 ## Table des matières
 1. [Préparation du live CD](#1-préparation-du-live-cd)
@@ -634,7 +634,8 @@ yay -S ffmpeg gstreamer gst-libav gst-plugins-bad gst-plugins-base \
 
 Veuillez choisir entre KDE Plasma ou GNOME. Vous pouvez consulter des illustrations sur Internet ou des vidéos YouTube pour vous aider à faire votre choix. KDE Plasma est plus proche de Windows, tandis que GNOME se rapproche de l’interface de macOS.
 
-#### KDE Plasma
+<details>
+  <summary>KDE Plasma</summary>
 
 ```bash
 yay -S plasma-meta konsole dolphin ark kdenetwork-filesharing firefox usbutils gnu-free-fonts \
@@ -648,7 +649,10 @@ sudo systemctl enable plasmalogin
 sudo reboot
 ```
 
-#### GNOME
+</details>
+
+<details>
+  <summary>GNOME</summary>
 
 ```bash
 # Les paquets listés dans le `grep` sont exclus, car jugés inutiles à mon sens
@@ -661,6 +665,8 @@ sudo systemctl enable bluetooth
 sudo systemctl enable gdm
 sudo reboot
 ```
+
+</details>
 
 ### Imprimante et mDNS (si nécessaire)
 
