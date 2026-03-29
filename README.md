@@ -16,7 +16,7 @@ Installation complète d’Arch Linux incluant le chiffrement LUKS2 avec déverr
 11. [Snapshots Btrfs avec `Snapper`](#11-snapshots-btrfs-avec-snapper)
 12. [Configurations finales](#12-configurations-finales)
 13. [Vérifications finales](#13-vérifications-finales)
-14. [Résumé de la stack](#14-resume-de-la-stack)
+14. [Résumé de la stack](#14-résumé-de-la-stack)
 
 ---
 
