@@ -596,38 +596,50 @@ yay
 
 ### Pilotes graphiques et Wayland
 
+<details>
+  <summary>Intel</summary>
+
 ```bash
-# Intel
-yay -S wayland wayland-utils xorg-xwayland wl-clipboard mesa vulkan-intel \
-	intel-media-driver libva-utils
+yay -S wayland wayland-utils xorg-xwayland wl-clipboard mesa vulkan-intel intel-media-driver libva-utils
+```
 
-# AMD / Radeon
+</details>
+
+<details>
+  <summary>AMD / Radeon</summary>
+
+```bash
 yay -S wayland wayland-utils xorg-xwayland wl-clipboard mesa vulkan-radeon libva-utils
+```
 
+</details>
+
+<details>
+  <summary>Nvidia</summary>
+
+```bash
 # Nvidia – minimum RTX 2000 / GTX 1600
 # Remplacez `nvidia-open` par `nvidia-open-lts` si vous utilisez le noyau LTS
-yay -S wayland wayland-utils xorg-xwayland wl-clipboard nvidia-open nvidia-utils \
-	libva-nvidia-driver libva-utils
+yay -S wayland wayland-utils xorg-xwayland wl-clipboard nvidia-open nvidia-utils libva-nvidia-driver libva-utils
 
 # Nvidia – GTX 1000 ou inférieure
-yay -S wayland wayland-utils xorg-xwayland wl-clipboard nvidia-580xx-dkms nvidia-580xx-utils \
-	libva-nvidia-driver libva-utils
+yay -S wayland wayland-utils xorg-xwayland wl-clipboard nvidia-580xx-dkms nvidia-580xx-utils libva-nvidia-driver libva-utils
 
 sudo reboot
 ```
 
+</details>
+
 ### Audio (PipeWire)
 
 ```bash
-yay -S pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack \
-	pipewire-v4l2 pipewire-zeroconf sof-firmware
+yay -S pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pipewire-v4l2 pipewire-zeroconf sof-firmware
 ```
 
 ### Codecs multimédia
 
 ```bash
-yay -S ffmpeg gstreamer gst-libav gst-plugins-bad gst-plugins-base \
-	gst-plugins-good gst-plugins-ugly libheif gd openh264
+yay -S ffmpeg gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libheif gd openh264
 ```
 
 ### Installation de l’environnement de bureau
