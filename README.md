@@ -5,7 +5,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/Mauro177/arch-modern-install)](https://github.com/Mauro177/arch-modern-install/commits/main)
 [![Issues](https://img.shields.io/github/issues/Mauro177/arch-modern-install)](https://github.com/Mauro177/arch-modern-install/issues)
 
-Installation complète d’Arch Linux incluant le chiffrement LUKS2 avec déverrouillage automatique via TPM 2.0, Unified kernel image (UKI), Secure Boot, le système de fichiers Btrfs, ainsi qu’un environnement de bureau KDE Plasma ou GNOME.
+Installation complète d’Arch Linux incluant le chiffrement LUKS2 avec déverrouillage automatique via TPM 2.0, Unified Kernel Image (UKI), Secure Boot, le système de fichiers Btrfs, ainsi qu’un environnement de bureau KDE Plasma ou GNOME.
 
 ## Table des matières
 1. [Préparation du live CD](#1-préparation-du-live-cd)
