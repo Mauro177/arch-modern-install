@@ -178,7 +178,7 @@ reflector --verbose --sort rate -l 5 -p https --save /etc/pacman.d/mirrorlist
 ### Installer les paquets de base du système
 
 ```bash
-pacstrap -K /mnt base linux linux-firmware intel-ucode btrfs-progs efibootmgr iptables-nft networkmanager
+pacstrap -K /mnt base linux linux-firmware intel-ucode btrfs-progs efibootmgr networkmanager
 ```
 
 > Remplacez `intel-ucode` par `amd-ucode` si vous utilisez un processeur AMD.  
