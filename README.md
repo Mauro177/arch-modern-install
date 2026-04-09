@@ -110,14 +110,14 @@ mkfs.fat -F32 ${disk}1
 # Initialiser la partition chiffrée (vous devrez choisir une passphrase)
 # ⚠️ ATTENTION : veillez à remplacer le '2' si vous installez Arch Linux sur une autre partition
 # (voir `fdisk -l $disk`)
-cryptsetup -v luksFormat ${disk}2
+cryptsetup --type luks2 luksFormat ${disk}2
 
 # Déchiffrer la partition (la rendre accessible sous /dev/mapper/root)
-cryptsetup open ${disk}2 root
+# (`allow-discards` si SSD)
+cryptsetup --allow-discards --persistent open ${disk}2 root
 ```
 
 > LUKS2 chiffre l’intégralité de la partition. Sans la passphrase (ou sans TPM 2.0 configuré ultérieurement), les données restent illisibles.
-
 ---
 
 ## 3. Configuration Btrfs et sous-volumes
