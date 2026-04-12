@@ -32,7 +32,7 @@ Ce guide met en place une installation d’Arch Linux moderne, sécurisée et mi
 - **Chiffrement complet du disque** - LUKS2 (déverrouillage automatique via TPM 2.0 au démarrage)
 - **Système de fichiers Btrfs** - sous-volumes et compression Zstd
 - **Unified Kernel Image (UKI)** — noyau, initramfs et ligne de commande regroupés dans un fichier EFI bootable
-- **Secure Boot** - UKI signée (via `sbctl`)
+- **Secure Boot** - UKI signée (via `shim`)
 - **Environnement de bureau** - KDE Plasma ou GNOME (Wayland)
 - **Snapshots automatiques** - Snapper
 
@@ -927,7 +927,7 @@ systemctl --failed
 | Système de fichiers | Btrfs + sous-volumes + compression zstd |
 | Noyau | linux ou linux-lts |
 | Bootloader | UKI (systemd-stub, sans bootloader) |
-| Secure Boot | sbctl (clés personnelles) |
+| Secure Boot | shim |
 | Déverrouillage auto | TPM 2.0 (PCR 0+7) |
 | Init | systemd |
 | Réseau | NetworkManager |
