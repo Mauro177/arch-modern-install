@@ -406,7 +406,7 @@ sed -e '/^#NoExtract/s/^#//' -e '/^NoExtract/s@$@ boot/*-ucode.img@' -i /etc/pac
 
 ```bash
 echo "rd.luks.name=$(blkid -s UUID -o value ${part})=cryptroot rd.luks.options=$(blkid -s UUID -o value ${part})=tpm2-device=auto,tpm2-measure-pcr=yes \
-root=/dev/mapper/cryptroot rootflags=subvol=@ ro quiet splash" > /etc/kernel/cmdline
+root=/dev/mapper/cryptroot rootflags=subvol=@ module.sig_enforce=1 lockdown=integrity ro quiet splash" > /etc/kernel/cmdline
 ```
 
 *Activer la génération d'UKI avec `kernel-install` :*
@@ -625,8 +625,8 @@ printf "[Resolve]\nFallbackDNS=\n" > /etc/systemd/resolved.conf.d/fallback_dns.c
 # Active le DNS over TLS si disponible
 printf "[Resolve]\nDNSOverTLS=opportunistic\n" > /etc/systemd/resolved.conf.d/dns_over_tls.conf
 
-# Active le DNSSEC si disponible
-printf "[Resolve]\nDNSSEC=allow-downgrade\n" > /etc/systemd/resolved.conf.d/dnssec.conf
+# Désactiver le LLMNR, protocole Microsoft inutile quand MDNS (plus standard et sécurisé) est disponible
+printf "[Resolve]\nLLMNR=no\n" > /etc/systemd/resolved.conf.d/llmnr.conf
 ```
 
 *Activation :*
